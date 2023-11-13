@@ -1,0 +1,22 @@
+.main__container {
+  height: 50px;
+  width: 200px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000000;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.main__container:hover {
+  color: red;
+  cursor: pointer;
+  scale: 1.08;
+  transition: 0.4s;
+}
+
+.link {
+  text-decoration: none;
+}
