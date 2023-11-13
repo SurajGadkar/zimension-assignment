@@ -2,8 +2,9 @@ import { useState } from "react";
 import React from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import Form from "react-bootstrap/Form";
 
-const NewProjectModal = (props) => {
+const NewProjectModal = ({ onHide, show, setProjects }) => {
   const [input, setInput] = useState("");
 
   const randomId = Math.floor(Math.random() * 93459);
@@ -14,17 +15,20 @@ const NewProjectModal = (props) => {
 
   const newProject = { id: randomId, name: input, operations: [] };
 
-  const handleCreate = () => {
-    props.setProjects((prev) => [...prev, newProject]);
+  const handleCreate = (e) => {
+    e.preventDefault(); // Prevents the default form submission
+    setProjects((prev) => [...prev, newProject]);
     setInput("");
+    onHide(); // Close the modal after creating a new project
   };
-  console.log(input);
+
   return (
     <Modal
-      {...props}
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
+      onHide={onHide}
+      show={show}
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
@@ -32,16 +36,18 @@ const NewProjectModal = (props) => {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <input
-          type="text"
-          onChange={handleChange}
-          placeholder="Enter the project name"
-          value={input}
-        />
-        <button onClick={handleCreate}>Create</button>
+        <Form onSubmit={handleCreate}>
+          <Form.Control
+            type="text"
+            onChange={handleChange}
+            placeholder="Enter the project name"
+            value={input}
+          />
+          <Button type="submit">Create</Button>
+        </Form>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
+        <Button onClick={onHide}>Close</Button>
       </Modal.Footer>
     </Modal>
   );

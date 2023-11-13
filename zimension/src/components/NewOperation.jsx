@@ -37,9 +37,10 @@ function NewOperation({ projectId, setProjects }) {
       />
       <select name="opType" onChange={handleChange}>
         <option value="">Select an option</option>
-        <option value="option1">Option 1</option>
-        <option value="option2">Option 2</option>
-        <option value="option3">Option 3</option>
+        <option value="Tool D-2">Tool D-2</option>
+        <option value="Tool D-4">Tool D-4</option>
+        <option value="Tool D-6">Tool D-6</option>
+        <option value="Tool D-8">Tool D-8</option>
       </select>
       <button onClick={handleClick}>Create</button>
     </div>

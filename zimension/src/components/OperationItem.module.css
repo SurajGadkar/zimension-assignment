@@ -1,0 +1,38 @@
+.main__container {
+  width: 30%;
+  justify-content: space-between;
+  align-items: center;
+
+  display: flex;
+  flex-direction: row;
+
+  padding: 16px 0px;
+}
+
+.name {
+  width: 168px;
+  height: 50px;
+  background-color: #fadfdf;
+  color: #880202;
+  border: 1px solid #880202;
+  border-radius: 0.8rem;
+  font-weight: bold;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 8px;
+}
+
+.tool {
+  width: 125px;
+  height: 35px;
+  background-color: #404e53;
+  color: #fff;
+  border: 1px solid #404e53;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 8px;
+}

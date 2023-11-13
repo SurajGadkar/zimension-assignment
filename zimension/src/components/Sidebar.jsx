@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./Sidebar.module.css";
 import ProjectItem from "./ProjectItem";
 import NewProject from "./NewProject";
+import New from "./New";
 
 function Sidebar({ projects, setProjects }) {
   const [createToggle, setCreateToggle] = useState(false);
@@ -14,17 +15,7 @@ function Sidebar({ projects, setProjects }) {
           );
         })}
       </div>
-      <div>
-        <button
-          onClick={() => setCreateToggle((prev) => !prev)}
-          className={styles.create__btn}
-        >
-          {!createToggle ? "Create New" : "Close"}
-        </button>
-      </div>
-      <div className={`${createToggle ? styles.show : styles.hide}`}>
-        <NewProject setProjects={setProjects} />
-      </div>
+      <New setProjects={setProjects} />
     </div>
   );
 }

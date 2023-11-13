@@ -1,7 +1,10 @@
 .main__container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  flex-direction: column;
+  min-height: 300px;
+  margin: 16px 32px;
 }
 
 .show {
@@ -10,4 +13,26 @@
 
 .hide {
   display: none;
+}
+
+.new__btn {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  margin-right: 300px;
+}
+
+.project__name {
+  height: 60px;
+  width: 200px;
+  background-color: #fff;
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 0.5rem;
 }
