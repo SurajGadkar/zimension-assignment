@@ -7,7 +7,7 @@ function Avatar() {
       <div className={styles.account__text}>
         <h4>Account</h4>
       </div>
-      <div className={styles.profile__container}>profile</div>
+      <div className={styles.profile__container}></div>
     </div>
   );
 }
