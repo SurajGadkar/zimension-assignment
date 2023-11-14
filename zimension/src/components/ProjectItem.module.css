@@ -9,6 +9,10 @@
   border-radius: 0.5rem;
   box-shadow: 0px 4px 4px 0px #00000040;
 }
+.main__container > h3 {
+  font-size: 20px;
+  display: flex;
+}
 
 .main__container:hover {
   color: red;

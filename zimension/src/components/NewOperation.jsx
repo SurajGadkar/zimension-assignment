@@ -29,11 +29,13 @@ function NewOperation({ projectId, setProjects }) {
 
   return (
     <div>
+
       <input
         type="text"
         name="opName"
         placeholder="Enter the name of the placeholder"
         onChange={handleChange}
+        className = {styles}
       />
       <select name="opType" onChange={handleChange}>
         <option value="">Select an option</option>

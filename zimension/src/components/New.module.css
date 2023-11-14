@@ -1,0 +1,52 @@
+.create__btn {
+  height: 42px;
+  width: 160px;
+  color: #fff;
+  background-color: #ef3636;
+  border: 1px solid black;
+  border-radius: 0.4rem;
+  font-size: 18px;
+}
+
+.create__btn:hover {
+  color: #fff456;
+  cursor: pointer;
+  scale: 1.08;
+  transition: 0.4s;
+  background-color: #ef3636;
+}
+
+.form__container {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+
+  justify-content: space-around;
+  align-items: center;
+  padding: 2px 4px;
+}
+
+.body {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.add__padding {
+  margin: 4px 8px;
+}
+
+.btn {
+  height: 35px;
+  width: 128px;
+  color: #fff;
+  background-color: #ef3636;
+  border: 1px solid black;
+  border-radius: 0.4rem;
+  font-size: 14px;
+}
+
+.btn:hover {
+  background-color: #ef3636;
+}

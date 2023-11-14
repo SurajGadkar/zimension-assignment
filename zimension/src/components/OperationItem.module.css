@@ -36,3 +36,28 @@
   align-items: center;
   padding: 4px 8px;
 }
+
+.button_with_x {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: 1px solid red;
+  height: 48px;
+  width: 48px;
+  border-radius: 3rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.button_with_x::after {
+  content: "✕";
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.button_with_x:hover {
+  background-color: darkred;
+}

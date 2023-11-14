@@ -3,6 +3,7 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
+import styles from "./New.module.css";
 
 const NewProjectModal = ({ onHide, show, setProjects }) => {
   const [input, setInput] = useState("");
@@ -35,20 +36,23 @@ const NewProjectModal = ({ onHide, show, setProjects }) => {
           Add New Operation
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body>
-        <Form onSubmit={handleCreate}>
+      <Modal.Body className={styles.body}>
+        <Form onSubmit={handleCreate} className={styles.form__container}>
           <Form.Control
+            className={styles.add__padding}
             type="text"
             onChange={handleChange}
             placeholder="Enter the project name"
             value={input}
           />
-          <Button type="submit">Create</Button>
+          <Button
+            className={`${(styles.add__padding, styles.btn)}`}
+            type="submit"
+          >
+            Create
+          </Button>
         </Form>
       </Modal.Body>
-      <Modal.Footer>
-        <Button onClick={onHide}>Close</Button>
-      </Modal.Footer>
     </Modal>
   );
 };
@@ -58,7 +62,7 @@ const NewProject = ({ setProjects }) => {
 
   return (
     <div>
-      <Button variant="primary" onClick={() => setModalShow(true)}>
+      <Button className={styles.create__btn} onClick={() => setModalShow(true)}>
         Create New
       </Button>
 
