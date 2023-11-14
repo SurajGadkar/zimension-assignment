@@ -70,8 +70,6 @@
   min-height: 200px;
   justify-content: space-around;
   align-items: center;
-
-  border: 1px solid black;
 }
 
 .offCanvasBody {
